@@ -1,5 +1,5 @@
 Package: galilee
-Title: Transformation de galilee  (One Line, Title Case)
+Title: Transformation de galilee  
 Version: 0.0.0.9000
 Authors@R: 
     person("ATANGANA", "EYANGO", , "atanganadaniel98@gmail.com", role = c("aut", "cre"))
