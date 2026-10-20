@@ -1,9 +1,9 @@
 Package: galilee
-Title: What the Package Does (One Line, Title Case)
+Title: Transformation de galilee  (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("ATANGANA", "EYANGO", , "atanganadaniel98@gmail.com", role = c("aut", "cre"))
+Description: Outils pour appliquer la transformation de galilee entre deux referentiels, composer des vitesses et visualiser des trajectoires.
 License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.1
 Encoding: UTF-8
