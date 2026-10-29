@@ -11,13 +11,13 @@ galilee_position(x, t, v)
 
 \item{t}{Temps (en s).}
 
-\item{v}{vitesse de R' par rapport a R(m/s).}
+\item{v}{Vitesse de R' par rapport a R(m/s).}
 }
 \value{
 La position x' dans R' (en m).
 }
 \description{
-Calcule la poaition x' dans un referentiel R' en mouvement rectiligne
+Calcule la position x' dans un referentiel R' en mouvement rectiligne
 uniforme a la vitesse v par rapport a R.
 }
 \examples{
