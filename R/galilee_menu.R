@@ -25,10 +25,10 @@ galilee_menu <- function() {
     valeurs <- list(
       u_prime = saisir("Vitesse u' de la balle dans le train (m/s) : "),
       v = saisir("Vitesse v du train par rapport au quai (m/s) : "),
-      duree = saisir("Durée de l'observation (s) : ")
+      duree = saisir("Duree de l'observation (s) : ")
     )
     if (valeurs$duree <= 0) {
-      stop("La durée doit être positive.")
+      stop("La duree doit etre positive.")
     }
     valeurs
   }
@@ -58,6 +58,6 @@ galilee_menu <- function() {
     }
   }
 
-  cat("À bientôt !\n")
+  cat("A bientot !\n")
   invisible(NULL)
 }

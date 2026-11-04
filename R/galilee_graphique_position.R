@@ -14,10 +14,10 @@ galilee_graphique_position <- function(u_prime, v, duree = 5, pas = 0.1) {
   ggplot2::ggplot(donnees, ggplot2::aes(x = t, y = x, colour = referentiel)) +
     ggplot2::geom_line(linewidth = 1) +
     ggplot2::labs(
-      title = "Position de la balle selon le référentiel",
+      title = "Position de la balle selon le referentiel",
       x = "Temps (s)",
       y = "Position (m)",
-      colour = "Référentiel"
+      colour = "Referentiel"
     ) +
     ggplot2::theme_minimal()
 }

@@ -20,10 +20,10 @@ galilee_graphique_vitesse <- function(u_prime, v, duree = 5) {
     ggplot2::geom_line(linewidth = 1) +
     ggplot2::expand_limits(y = 0) +
     ggplot2::labs(
-      title = "Vitesse de la balle selon le référentiel",
+      title = "Vitesse de la balle selon le referentiel",
       x = "Temps (s)",
       y = "Vitesse (m/s)",
-      colour = "Référentiel"
+      colour = "Referentiel"
     ) +
     ggplot2::theme_minimal()
 }

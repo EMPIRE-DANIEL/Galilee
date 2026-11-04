@@ -12,7 +12,7 @@
 #' }
 galilee_animation <- function(u_prime, v, duree = 5, pas = 0.1) {
   if (!requireNamespace("gganimate", quietly = TRUE)) {
-    stop("Le package gganimate est nécessaire pour l'animation.")
+    stop("Le package gganimate est necessaire pour l'animation.")
   }
 
   t <- seq(0, duree, by = pas)
@@ -30,7 +30,7 @@ galilee_animation <- function(u_prime, v, duree = 5, pas = 0.1) {
     ggplot2::geom_point(size = 6) +
     ggplot2::facet_wrap(~vue, ncol = 1) +
     ggplot2::labs(
-      title = paste0("Train à ", v, " m/s, balle à ", u_prime, " m/s dans le train"),
+      title = paste0("Train a ", v, " m/s, balle a ", u_prime, " m/s dans le train"),
       subtitle = "Temps : {round(frame_time, 1)} s",
       x = "Position (m)",
       y = NULL
