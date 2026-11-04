@@ -7,7 +7,7 @@ déplace à vitesse constante par rapport à R.
 ## Installation
 
 ```r
-install.packages("devtools")
+install.packages("remotes")
 devtools::install_github("EMPIRE-DANIEL/Galilee")
 ```
 
