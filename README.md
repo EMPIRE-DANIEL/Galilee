@@ -25,6 +25,7 @@ library(galilee)
 galilee_position(x = 100, t = 2, v = 20)   # 60 # A titre d'exemple
 galilee_vitesse(u_prime = 5, v = 20)       # 25 # A titre d'exemple
 galilee_menu()                             # mode interactif # ici, les valeurs peuvent donc directement etre entree par l'utilisateur, et les resultats se feront en fonction de ces donnees.
+galilee_croisement(30, 20, 200, 300)   # deux trains qui se croisent # toutes les valeurs mises ici sont ecrites a titre d'exemples.
 ```
 
 ## Les fonctions
