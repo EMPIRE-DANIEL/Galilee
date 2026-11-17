@@ -1,14 +1,15 @@
-#' Composition des vitesses (Galilee)
+#' Galilean composition of velocities
 #'
-#' Calcule la vitesse u d'un objet dans R a partir de sa vitesse u' dans R' et
-#' de la vitesse v de R' par rapport a R.
+#' Computes the velocity u of an object in R from its velocity u' in R' and
+#' the speed v of R' relative to R: u = u' + v.
 #'
-#' @param u_prime Vitesse de l'objet dans R' (en m/s).
-#' @param v Vitesse de R' par rapport a R (en m/s).
-#' @return La vitesse u de l'objet dans R (m/s).
+#' @param u_prime Velocity of the object in R', in meters per second.
+#' @param v Speed of R' relative to R, in meters per second.
+#' @return The velocity u of the object in R, in meters per second.
 #' @export
 #' @examples
-#' galilee_vitesse (u_prime = 5, v =20)
-galilee_vitesse <- function(u_prime, v){
+#' galilee_vitesse(u_prime = 5, v = 20)
+galilee_vitesse <- function(u_prime, v) {
   u_prime + v
 }
+

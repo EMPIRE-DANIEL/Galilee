@@ -1,19 +1,20 @@
-#' Calculs de Galilee par remplissage de valeurs de facon precise(interactif)
+#' Galilean computations in interactive mode
 #'
-#' Pose des questions dans la console, puis calcul de la position et la vitesse dans
-#' l'autre referentiel.
+#' Asks for the values in the console, then computes the position x' in R'
+#' and the velocity u in R.
 #'
-#' @return Rien (les resultats sont affiches).
+#' @return Nothing. The results are printed in the console.
 #' @export
 galilee_interactif <- function() {
-  x <- as.numeric(readline("Position x dans R (m) : "))
-  t <- as.numeric(readline("Temps t (s) : "))
-  v <- as.numeric(readline("Vitesse v de R' par rapport a R (m/s) : "))
-  u_prime <- as.numeric(readline("Vitesse u' de l'objet dans R' (m/s) : "))
-  if (anyNA(c(x, t, v, u_prime))){
-    stop("Entre uniquement des nombres.")
+  x <- as.numeric(readline("Position x in R (m): "))
+  t <- as.numeric(readline("Time t (s): "))
+  v <- as.numeric(readline("Speed v of R' relative to R (m/s): "))
+  u_prime <- as.numeric(readline("Velocity u' of the object in R' (m/s): "))
+  if (anyNA(c(x, t, v, u_prime))) {
+    stop("Please enter numbers only.")
   }
-  cat("Position x' dans R' :", galilee_position(x, t, v), "m\n")
-  cat("Vitesse u dans R :",galilee_vitesse(u_prime, v), "m/s\n")
+  cat("Position x' in R':", galilee_position(x, t, v), "m\n")
+  cat("Velocity u in R  :", galilee_vitesse(u_prime, v), "m/s\n")
   invisible(NULL)
 }
+

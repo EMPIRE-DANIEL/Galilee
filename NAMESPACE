@@ -3,6 +3,7 @@
 export(galilee_animation)
 export(galilee_croisement)
 export(galilee_croisement_animation)
+export(galilee_croisement_interactif)
 export(galilee_croisement_positions)
 export(galilee_graphique_position)
 export(galilee_graphique_vitesse)

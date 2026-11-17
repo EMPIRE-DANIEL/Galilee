@@ -1,17 +1,18 @@
-#'Trajectoire d'une balle vue depuis deux referentiels
+#' Positions of a ball seen from two reference frames
 #'
-#'Une balle est lancee dans un train. La fonction donne sa position
-#'au cours du temps, vue du quai (R) et vue du train (R').
+#' A ball is thrown inside a train. The function gives its position over
+#' time, seen from the platform (R) and seen from the train (R').
 #'
-#'@param u_prime Vitesse de la balle dans le train (en m/s).
-#'@param v Vitesse du train par rapport au  quai (en m/s).
-#'@param duree Duree  totale (en s).
-#'@param pas Pas de temps (en s).
-#'@return Un data.frame avec le temps t, la position x et le referentiel.
-#'@export
+#' @param u_prime Velocity of the ball inside the train, in meters per second.
+#' @param v Speed of the train relative to the platform, in meters per second.
+#' @param duree Total duration, in seconds.
+#' @param pas Time step, in seconds.
+#' @return A data.frame with the time t, the position x and the reference
+#'   frame (column referentiel).
+#' @export
 #' @examples
-#'galilee_trajectoire(u_prime = 5, v = 20, duree = 5)
-galilee_trajectoire <- function (u_prime, v, duree = 5, pas = 0.1){
+#' galilee_trajectoire(u_prime = 5, v = 20, duree = 5)
+galilee_trajectoire <- function(u_prime, v, duree = 5, pas = 0.1) {
   t <- seq(0, duree, by = pas)
   x_quai <- galilee_vitesse(u_prime, v) * t
   x_train <- galilee_position(x_quai, t, v)

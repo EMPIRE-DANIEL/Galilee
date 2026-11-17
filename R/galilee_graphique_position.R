@@ -1,10 +1,10 @@
-#' Graphique des positions
+#' Plot of the positions
 #'
-#' Trace la position de la balle au cours du temps, vue du quai (R)
-#' et vue du train (R').
+#' Plots the position of the ball over time, seen from the platform (R)
+#' and seen from the train (R').
 #'
 #' @inheritParams galilee_trajectoire
-#' @return Un graphique ggplot2.
+#' @return A ggplot2 plot.
 #' @export
 #' @examples
 #' galilee_graphique_position(u_prime = 5, v = 20)
@@ -14,10 +14,11 @@ galilee_graphique_position <- function(u_prime, v, duree = 5, pas = 0.1) {
   ggplot2::ggplot(donnees, ggplot2::aes(x = t, y = x, colour = referentiel)) +
     ggplot2::geom_line(linewidth = 1) +
     ggplot2::labs(
-      title = "Position de la balle selon le referentiel",
-      x = "Temps (s)",
+      title = "Position of the ball in each reference frame",
+      x = "Time (s)",
       y = "Position (m)",
-      colour = "Referentiel"
+      colour = "Reference frame"
     ) +
     ggplot2::theme_minimal()
 }
+

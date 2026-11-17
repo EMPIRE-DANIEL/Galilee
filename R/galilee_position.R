@@ -1,15 +1,16 @@
-#' Transformation de Galilee (position)
+#' Galilean transformation of a position
 #'
-#' Calcule la position x' dans un referentiel R' en mouvement rectiligne
-#' uniforme a la vitesse v par rapport a R.
+#' Computes the position x' of a point in a reference frame R' that moves at
+#' a constant speed v along the x axis relative to R: x' = x - v * t.
 #'
-#' @param x Position dans R (m).
-#' @param t Temps (en s).
-#' @param v Vitesse de R' par rapport a R(m/s).
-#' @return La position x' dans R' (en m).
+#' @param x Position in R, in meters.
+#' @param t Time, in seconds.
+#' @param v Speed of R' relative to R, in meters per second.
+#' @return The position x' in R', in meters.
 #' @export
 #' @examples
-#' galilee_position (x = 100, t = 2, v = 20)
-galilee_position <- function(x, t, v){
+#' galilee_position(x = 100, t = 2, v = 20)
+galilee_position <- function(x, t, v) {
   x - v * t
 }
+

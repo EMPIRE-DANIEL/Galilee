@@ -1,11 +1,11 @@
-#' Graphique des vitesses
+#' Plot of the velocities
 #'
-#' Trace la vitesse de la balle au cours du temps, vue du quai (R)
-#' et vue du train (R'). Le mouvement est uniforme, donc les vitesses
-#' restent constantes.
+#' Plots the velocity of the ball over time, seen from the platform (R) and
+#' seen from the train (R'). The motion is uniform, so the velocities stay
+#' constant and the two curves are horizontal lines.
 #'
 #' @inheritParams galilee_trajectoire
-#' @return Un graphique ggplot2.
+#' @return A ggplot2 plot.
 #' @export
 #' @examples
 #' galilee_graphique_vitesse(u_prime = 5, v = 20)
@@ -20,10 +20,11 @@ galilee_graphique_vitesse <- function(u_prime, v, duree = 5) {
     ggplot2::geom_line(linewidth = 1) +
     ggplot2::expand_limits(y = 0) +
     ggplot2::labs(
-      title = "Vitesse de la balle selon le referentiel",
-      x = "Temps (s)",
-      y = "Vitesse (m/s)",
-      colour = "Referentiel"
+      title = "Velocity of the ball in each reference frame",
+      x = "Time (s)",
+      y = "Velocity (m/s)",
+      colour = "Reference frame"
     ) +
     ggplot2::theme_minimal()
 }
+

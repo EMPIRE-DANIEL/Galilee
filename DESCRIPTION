@@ -1,9 +1,9 @@
 Package: galilee
-Title: Transformation de galilee  
+Title: Galilean Transformation Between Two Reference Frames
 Version: 0.0.0.9000
 Authors@R: 
     person("ATANGANA", "EYANGO", , "atanganadaniel98@gmail.com", role = c("aut", "cre"))
-Description: Outils pour appliquer la transformation de galilee entre deux referentiels, composer des vitesses et visualiser des trajectoires.
+Description: Tools to apply the Galilean transformation between two reference frames, compose velocities, plot positions and velocities, and solve a railway crossing and overtaking problem.
 License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.1
 Encoding: UTF-8

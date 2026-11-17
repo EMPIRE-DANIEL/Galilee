@@ -2,7 +2,7 @@
 % Please edit documentation in R/galilee_croisement_animation.R
 \name{galilee_croisement_animation}
 \alias{galilee_croisement_animation}
-\title{Animation du croisement ou du depassement de deux trains}
+\title{Animation of two trains crossing or overtaking}
 \usage{
 galilee_croisement_animation(
   v_a,
@@ -16,28 +16,30 @@ galilee_croisement_animation(
 )
 }
 \arguments{
-\item{v_a}{Vitesse du train A par rapport au quai (en m/s).}
+\item{v_a}{Speed of train A relative to the platform, in meters per second.}
 
-\item{v_b}{Vitesse du train B par rapport au quai (en m/s).}
+\item{v_b}{Speed of train B relative to the platform, in meters per second.}
 
-\item{long_a}{Longueur du train A (en m).}
+\item{long_a}{Length of train A, in meters.}
 
-\item{long_b}{Longueur du train B (en m).}
+\item{long_b}{Length of train B, in meters.}
 
-\item{sens}{"opposes" pour des sens contraires, "meme_sens" sinon.}
+\item{sens}{Use "opposes" for opposite directions (crossing) or
+"meme_sens" for the same direction (overtaking).}
 
-\item{avant}{Duree avant la rencontre (en s).}
+\item{avant}{Time before the meeting, in seconds.}
 
-\item{apres}{Duree apres la fin du croisement (en s).}
+\item{apres}{Time after the end of the overlap, in seconds.}
 
-\item{pas}{Pas de temps (en s).}
+\item{pas}{Time step, in seconds.}
 }
 \value{
-Une animation gganimate.
+A gganimate animation.
 }
 \description{
-Montre les deux trains sur deux voies, vus du quai. La zone doree
-indique ou les deux trains se recouvrent.
+Shows the two trains on two tracks, seen from the platform. The golden
+zone shows where the two trains overlap. Needs the packages gganimate and
+gifski.
 }
 \examples{
 \dontrun{

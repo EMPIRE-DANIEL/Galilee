@@ -58,6 +58,7 @@ distances covered by both trains.
 each instant.
 \item \code{\link[=galilee_croisement_animation]{galilee_croisement_animation()}} animates the two trains and the zone
 where they overlap.
+\item \code{\link[=galilee_croisement_interactif]{galilee_croisement_interactif()}} asks for the values in the console.
 }
 }
 

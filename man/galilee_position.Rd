@@ -2,24 +2,24 @@
 % Please edit documentation in R/galilee_position.R
 \name{galilee_position}
 \alias{galilee_position}
-\title{Transformation de Galilee (position)}
+\title{Galilean transformation of a position}
 \usage{
 galilee_position(x, t, v)
 }
 \arguments{
-\item{x}{Position dans R (m).}
+\item{x}{Position in R, in meters.}
 
-\item{t}{Temps (en s).}
+\item{t}{Time, in seconds.}
 
-\item{v}{Vitesse de R' par rapport a R(m/s).}
+\item{v}{Speed of R' relative to R, in meters per second.}
 }
 \value{
-La position x' dans R' (en m).
+The position x' in R', in meters.
 }
 \description{
-Calcule la position x' dans un referentiel R' en mouvement rectiligne
-uniforme a la vitesse v par rapport a R.
+Computes the position x' of a point in a reference frame R' that moves at
+a constant speed v along the x axis relative to R: x' = x - v * t.
 }
 \examples{
-galilee_position (x = 100, t = 2, v = 20)
+galilee_position(x = 100, t = 2, v = 20)
 }

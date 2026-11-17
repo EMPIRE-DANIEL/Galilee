@@ -2,7 +2,7 @@
 % Please edit documentation in R/galilee_croisement_positions.R
 \name{galilee_croisement_positions}
 \alias{galilee_croisement_positions}
-\title{Positions de deux trains au cours du temps}
+\title{Positions of two trains over time}
 \usage{
 galilee_croisement_positions(
   v_a,
@@ -16,28 +16,31 @@ galilee_croisement_positions(
 )
 }
 \arguments{
-\item{v_a}{Vitesse du train A par rapport au quai (en m/s).}
+\item{v_a}{Speed of train A relative to the platform, in meters per second.}
 
-\item{v_b}{Vitesse du train B par rapport au quai (en m/s).}
+\item{v_b}{Speed of train B relative to the platform, in meters per second.}
 
-\item{long_a}{Longueur du train A (en m).}
+\item{long_a}{Length of train A, in meters.}
 
-\item{long_b}{Longueur du train B (en m).}
+\item{long_b}{Length of train B, in meters.}
 
-\item{sens}{"opposes" pour des sens contraires, "meme_sens" sinon.}
+\item{sens}{Use "opposes" for opposite directions (crossing) or
+"meme_sens" for the same direction (overtaking).}
 
-\item{avant}{Duree avant la rencontre (en s).}
+\item{avant}{Time before the meeting, in seconds.}
 
-\item{apres}{Duree apres la fin du croisement (en s).}
+\item{apres}{Time after the end of the overlap, in seconds.}
 
-\item{pas}{Pas de temps (en s).}
+\item{pas}{Time step, in seconds.}
 }
 \value{
-Un data.frame : t, train, xmin, xmax, ymin, ymax.
+A data.frame with the columns t, train, xmin, xmax, ymin and ymax.
+Each train is a rectangle from xmin to xmax.
 }
 \description{
-Calcule, vu du quai, la position de l'avant et de l'arriere de chaque
-train. Le temps est choisi pour que la rencontre ait lieu a t = avant.
+Computes, seen from the platform, the position of the front and of the
+rear of each train. The time origin is chosen so that the fronts meet at
+the time given by avant.
 }
 \examples{
 head(galilee_croisement_positions(30, 20, 200, 300))

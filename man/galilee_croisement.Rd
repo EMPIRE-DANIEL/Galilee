@@ -2,30 +2,32 @@
 % Please edit documentation in R/galilee_croisement.R
 \name{galilee_croisement}
 \alias{galilee_croisement}
-\title{Croisement ou dépassement de deux trains}
+\title{Crossing or overtaking of two trains}
 \usage{
 galilee_croisement(v_a, v_b, long_a, long_b, sens = "opposes")
 }
 \arguments{
-\item{v_a}{Vitesse du train A par rapport au quai (en m/s).}
+\item{v_a}{Speed of train A relative to the platform, in meters per second.}
 
-\item{v_b}{Vitesse du train B par rapport au quai (en m/s).}
+\item{v_b}{Speed of train B relative to the platform, in meters per second.}
 
-\item{long_a}{Longueur du train A (en m).}
+\item{long_a}{Length of train A, in meters.}
 
-\item{long_b}{Longueur du train B (en m).}
+\item{long_b}{Length of train B, in meters.}
 
-\item{sens}{"opposes" pour des sens contraires, "meme_sens" sinon.}
+\item{sens}{Use "opposes" for opposite directions (crossing) or
+"meme_sens" for the same direction (overtaking).}
 }
 \value{
-Un data.frame : situation, vitesse relative, durée et distances
-parcourues par A et B pendant ce temps.
+A data.frame with the situation, the relative speed (m/s), the
+duration of the overlap (s) and the distances covered by A and B during
+that time (m).
 }
 \description{
-Vu depuis le train A, le train A est immobile et le train B arrive à la
-vitesse relative u' = u - v : c'est la loi d'addition des vitesses lue à
-l'envers. La fonction donne la durée pendant laquelle les deux trains se
-recouvrent, de la rencontre des têtes au passage des queues.
+Seen from train A, train B arrives at the relative speed given by
+u = u' + v, the Galilean composition of velocities. The two trains overlap
+from the moment their fronts meet until their rears have passed each other,
+so the duration is the sum of the two lengths divided by the relative speed.
 }
 \examples{
 galilee_croisement(30, 20, 200, 300)

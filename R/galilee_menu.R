@@ -1,48 +1,48 @@
-#' Menu interactif
+#' Interactive menu
 #'
-#' Demande les valeurs dans la console, puis propose de tracer le
-#' graphique des positions, celui des vitesses, ou l'animation. On peut
-#' enchaîner les choix et changer les valeurs.
+#' Asks for the values in the console, then offers the plot of the positions,
+#' the plot of the velocities or the animation. The choices can be repeated
+#' and the values can be changed.
 #'
-#' @return Rien (les graphiques sont affichés).
+#' @return Nothing. The plots are displayed.
 #' @export
 #' @examples
 #' \dontrun{
 #' galilee_menu()
 #' }
 galilee_menu <- function() {
-  # lit un nombre tapé dans la console
+  # reads a number typed in the console
   saisir <- function(question) {
     valeur <- suppressWarnings(as.numeric(readline(question)))
     if (is.na(valeur)) {
-      stop("Entre uniquement des nombres.")
+      stop("Please enter numbers only.")
     }
     valeur
   }
 
-  # pose les trois questions et range les réponses dans une liste
+  # asks the three questions and stores the answers in a list
   demander_valeurs <- function() {
     valeurs <- list(
-      u_prime = saisir("Vitesse u' de la balle dans le train (m/s) : "),
-      v = saisir("Vitesse v du train par rapport au quai (m/s) : "),
-      duree = saisir("Duree de l'observation (s) : ")
+      u_prime = saisir("Velocity u' of the ball inside the train (m/s): "),
+      v = saisir("Speed v of the train relative to the platform (m/s): "),
+      duree = saisir("Observation duration (s): ")
     )
     if (valeurs$duree <= 0) {
-      stop("La duree doit etre positive.")
+      stop("The duration must be positive.")
     }
     valeurs
   }
 
   valeurs <- demander_valeurs()
 
-  # le menu revient jusqu'à ce qu'on tape 0
+  # the menu comes back until 0 is typed
   repeat {
     choix <- utils::menu(
-      c("Graphique des positions",
-        "Graphique des vitesses",
-        "Animation du train et de la balle",
-        "Changer les valeurs"),
-      title = "\nQue veux-tu voir ? (0 pour quitter)"
+      c("Plot of the positions",
+        "Plot of the velocities",
+        "Animation of the train and the ball",
+        "Change the values"),
+      title = "\nWhat do you want to see? (0 to quit)"
     )
 
     if (choix == 0) break
@@ -58,6 +58,7 @@ galilee_menu <- function() {
     }
   }
 
-  cat("A bientot !\n")
+  cat("Goodbye!\n")
   invisible(NULL)
 }
+

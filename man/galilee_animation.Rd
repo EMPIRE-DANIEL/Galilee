@@ -2,25 +2,25 @@
 % Please edit documentation in R/galilee_animation.R
 \name{galilee_animation}
 \alias{galilee_animation}
-\title{Animation du train et de la balle}
+\title{Animation of a train and a ball}
 \usage{
 galilee_animation(u_prime, v, duree = 5, pas = 0.1)
 }
 \arguments{
-\item{u_prime}{Vitesse de la balle dans le train (en m/s).}
+\item{u_prime}{Velocity of the ball inside the train, in meters per second.}
 
-\item{v}{Vitesse du train par rapport au  quai (en m/s).}
+\item{v}{Speed of the train relative to the platform, in meters per second.}
 
-\item{duree}{Duree  totale (en s).}
+\item{duree}{Total duration, in seconds.}
 
-\item{pas}{Pas de temps (en s).}
+\item{pas}{Time step, in seconds.}
 }
 \value{
-Une animation gganimate.
+A gganimate animation.
 }
 \description{
-Montre le train et la balle qui avancent, vus du quai (R) puis
-vus du train (R').
+Shows the train and the ball moving, seen from the platform (R) and then
+seen from the train (R'). Needs the packages gganimate and gifski.
 }
 \examples{
 \dontrun{

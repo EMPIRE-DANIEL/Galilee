@@ -2,24 +2,24 @@
 % Please edit documentation in R/galilee_graphique_vitesse.R
 \name{galilee_graphique_vitesse}
 \alias{galilee_graphique_vitesse}
-\title{Graphique des vitesses}
+\title{Plot of the velocities}
 \usage{
 galilee_graphique_vitesse(u_prime, v, duree = 5)
 }
 \arguments{
-\item{u_prime}{Vitesse de la balle dans le train (en m/s).}
+\item{u_prime}{Velocity of the ball inside the train, in meters per second.}
 
-\item{v}{Vitesse du train par rapport au  quai (en m/s).}
+\item{v}{Speed of the train relative to the platform, in meters per second.}
 
-\item{duree}{Duree  totale (en s).}
+\item{duree}{Total duration, in seconds.}
 }
 \value{
-Un graphique ggplot2.
+A ggplot2 plot.
 }
 \description{
-Trace la vitesse de la balle au cours du temps, vue du quai (R)
-et vue du train (R'). Le mouvement est uniforme, donc les vitesses
-restent constantes.
+Plots the velocity of the ball over time, seen from the platform (R) and
+seen from the train (R'). The motion is uniform, so the velocities stay
+constant and the two curves are horizontal lines.
 }
 \examples{
 galilee_graphique_vitesse(u_prime = 5, v = 20)

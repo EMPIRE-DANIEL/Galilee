@@ -1,10 +1,11 @@
-#' Animation du croisement ou du depassement de deux trains
+#' Animation of two trains crossing or overtaking
 #'
-#' Montre les deux trains sur deux voies, vus du quai. La zone doree
-#' indique ou les deux trains se recouvrent.
+#' Shows the two trains on two tracks, seen from the platform. The golden
+#' zone shows where the two trains overlap. Needs the packages gganimate and
+#' gifski.
 #'
 #' @inheritParams galilee_croisement_positions
-#' @return Une animation gganimate.
+#' @return A gganimate animation.
 #' @export
 #' @examples
 #' \dontrun{
@@ -14,13 +15,13 @@ galilee_croisement_animation <- function(v_a, v_b, long_a, long_b,
                                          sens = "opposes",
                                          avant = 3, apres = 3, pas = 0.1) {
   if (!requireNamespace("gganimate", quietly = TRUE)) {
-    stop("Le package gganimate est necessaire pour l'animation.")
+    stop("Package gganimate is required for the animation.")
   }
   pos <- galilee_croisement_positions(v_a, v_b, long_a, long_b, sens, avant, apres, pas)
   a <- pos[pos$train == "Train A", ]
   b <- pos[pos$train == "Train B", ]
 
-  # zone ou les deux trains se recouvrent
+  # zone where the two trains overlap
   zone <- data.frame(t = a$t,
                      xmin = pmax(a$xmin, b$xmin),
                      xmax = pmin(a$xmax, b$xmax),
@@ -28,9 +29,9 @@ galilee_croisement_animation <- function(v_a, v_b, long_a, long_b,
   zone <- zone[zone$xmin < zone$xmax, ]
 
   titre <- if (sens == "opposes") {
-    "Croisement de deux trains"
+    "Two trains crossing"
   } else {
-    "D\u00e9passement de deux trains"
+    "One train overtaking the other"
   }
 
   ggplot2::ggplot() +
@@ -42,11 +43,12 @@ galilee_croisement_animation <- function(v_a, v_b, long_a, long_b,
                        colour = "#0B2545") +
     ggplot2::scale_fill_manual(values = c("Train A" = "#8DA9C4", "Train B" = "#B5523B")) +
     ggplot2::labs(title = titre,
-                  subtitle = "Temps : {round(frame_time, 1)} s",
-                  x = "Position sur la voie (m)", y = NULL, fill = NULL) +
+                  subtitle = "Time: {round(frame_time, 1)} s",
+                  x = "Position on the track (m)", y = NULL, fill = NULL) +
     ggplot2::theme_minimal() +
     ggplot2::theme(axis.text.y = ggplot2::element_blank(),
                    panel.grid.minor = ggplot2::element_blank(),
                    panel.grid.major.y = ggplot2::element_blank()) +
     gganimate::transition_time(t)
 }
+

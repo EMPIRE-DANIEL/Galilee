@@ -2,14 +2,14 @@
 % Please edit documentation in R/galilee_interactif.R
 \name{galilee_interactif}
 \alias{galilee_interactif}
-\title{Calculs de Galilee par remplissage de valeurs de facon precise(interactif)}
+\title{Galilean computations in interactive mode}
 \usage{
 galilee_interactif()
 }
 \value{
-Rien (les resultats sont affiches).
+Nothing. The results are printed in the console.
 }
 \description{
-Pose des questions dans la console, puis calcul de la position et la vitesse dans
-l'autre referentiel.
+Asks for the values in the console, then computes the position x' in R'
+and the velocity u in R.
 }

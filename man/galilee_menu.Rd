@@ -2,17 +2,17 @@
 % Please edit documentation in R/galilee_menu.R
 \name{galilee_menu}
 \alias{galilee_menu}
-\title{Menu interactif}
+\title{Interactive menu}
 \usage{
 galilee_menu()
 }
 \value{
-Rien (les graphiques sont affichés).
+Nothing. The plots are displayed.
 }
 \description{
-Demande les valeurs dans la console, puis propose de tracer le
-graphique des positions, celui des vitesses, ou l'animation. On peut
-enchaîner les choix et changer les valeurs.
+Asks for the values in the console, then offers the plot of the positions,
+the plot of the velocities or the animation. The choices can be repeated
+and the values can be changed.
 }
 \examples{
 \dontrun{

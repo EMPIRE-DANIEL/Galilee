@@ -40,6 +40,7 @@
 #'   each instant.
 #' * [galilee_croisement_animation()] animates the two trains and the zone
 #'   where they overlap.
+#' * [galilee_croisement_interactif()] asks for the values in the console.
 #'
 #' @examples
 #' galilee_position(x = 100, t = 2, v = 20)
@@ -50,3 +51,4 @@
 #' @seealso <https://github.com/EMPIRE-DANIEL/Galilee>
 #' @aliases galilee
 "_PACKAGE"
+

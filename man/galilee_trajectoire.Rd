@@ -2,25 +2,26 @@
 % Please edit documentation in R/galilee_trajectoire.R
 \name{galilee_trajectoire}
 \alias{galilee_trajectoire}
-\title{Trajectoire d'une balle vue depuis deux referentiels}
+\title{Positions of a ball seen from two reference frames}
 \usage{
 galilee_trajectoire(u_prime, v, duree = 5, pas = 0.1)
 }
 \arguments{
-\item{u_prime}{Vitesse de la balle dans le train (en m/s).}
+\item{u_prime}{Velocity of the ball inside the train, in meters per second.}
 
-\item{v}{Vitesse du train par rapport au  quai (en m/s).}
+\item{v}{Speed of the train relative to the platform, in meters per second.}
 
-\item{duree}{Duree  totale (en s).}
+\item{duree}{Total duration, in seconds.}
 
-\item{pas}{Pas de temps (en s).}
+\item{pas}{Time step, in seconds.}
 }
 \value{
-Un data.frame avec le temps t, la position x et le referentiel.
+A data.frame with the time t, the position x and the reference
+frame (column referentiel).
 }
 \description{
-Une balle est lancee dans un train. La fonction donne sa position
-au cours du temps, vue du quai (R) et vue du train (R').
+A ball is thrown inside a train. The function gives its position over
+time, seen from the platform (R) and seen from the train (R').
 }
 \examples{
 galilee_trajectoire(u_prime = 5, v = 20, duree = 5)
